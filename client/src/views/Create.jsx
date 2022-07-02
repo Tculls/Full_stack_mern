@@ -10,9 +10,11 @@ const Create = () => {
     const navigate= useNavigate()
 
     const handleSubmit=(e) =>{
+        e.preventDefault()
         axios.post(`http://localhost:8000/api/products`, {title, price, description})
-        .then(response=>navigate('/'))
+        .then(()=>navigate('/'))
         .catch(err=>console.log(err))
+        
     }
 
     return(

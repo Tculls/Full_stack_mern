@@ -15,11 +15,11 @@ function App() {
       <Link to ="/products">Add Product</Link>
       
       <Routes>
-        <Route path="/products" element={<><Create /></>}/>
+        <Route path="/products" element={<Create />}/>
         <Route path="/" element={<Dashboard />}/>
         <Route path="/products/:id/" element={<Details />}/>
         <Route path="/products/:id/edit" element={<Update />}/>
-        <Route path="*" element={<><h1>Error</h1></>}/>
+        <Route path="*" element={<h1>Error</h1>}/>
       </Routes>
 
       </BrowserRouter>
